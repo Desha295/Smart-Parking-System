@@ -1,0 +1,40 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net9.0-windows</TargetFramework>
+    <UseWindowsForms>true</UseWindowsForms>
+    <AssemblyName>SmartParkingSystem</AssemblyName>
+    <RootNamespace>SmartParkingSystem</RootNamespace>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <SelfContained>true</SelfContained>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
+    <PublishSingleFile>false</PublishSingleFile>
+  </PropertyGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Data.SQLite" Version="1.0.118" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="Forms\LoginForm.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Forms\LoginForm.Designer.cs"><DependentUpon>LoginForm.cs</DependentUpon></Compile>
+    <EmbeddedResource Update="Forms\LoginForm.resx"><DependentUpon>LoginForm.cs</DependentUpon></EmbeddedResource>
+    <Compile Update="Forms\RegisterForm.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Forms\RegisterForm.Designer.cs"><DependentUpon>RegisterForm.cs</DependentUpon></Compile>
+    <EmbeddedResource Update="Forms\RegisterForm.resx"><DependentUpon>RegisterForm.cs</DependentUpon></EmbeddedResource>
+    <Compile Update="Forms\DriverDashboard.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Forms\DriverDashboard.Designer.cs"><DependentUpon>DriverDashboard.cs</DependentUpon></Compile>
+    <EmbeddedResource Update="Forms\DriverDashboard.resx"><DependentUpon>DriverDashboard.cs</DependentUpon></EmbeddedResource>
+    <Compile Update="Forms\AdminDashboard.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Forms\AdminDashboard.Designer.cs"><DependentUpon>AdminDashboard.cs</DependentUpon></Compile>
+    <EmbeddedResource Update="Forms\AdminDashboard.resx"><DependentUpon>AdminDashboard.cs</DependentUpon></EmbeddedResource>
+    <Compile Update="Forms\BookSlotForm.cs"><SubType>Form</SubType></Compile>
+    <Compile Update="Forms\BookSlotForm.Designer.cs"><DependentUpon>BookSlotForm.cs</DependentUpon></Compile>
+    <EmbeddedResource Update="Forms\BookSlotForm.resx"><DependentUpon>BookSlotForm.cs</DependentUpon></EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Update="Resources\Logo_Parking.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <CopyToPublishDirectory>Always</CopyToPublishDirectory>
+    </None>
+  </ItemGroup>
+</Project>
